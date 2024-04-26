@@ -1,0 +1,30 @@
+.aik-not-logged-in-container,
+.aik-not-connected-container,
+.aik-no-issues-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.aik-not-logged-in-icon-container,
+.aik-not-connected-icon-container,
+.aik-no-issues-icon-container {
+  width: 60px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.aik-not-logged-in-link-container,
+.aik-not-connected-link-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  text-align: right;
+}

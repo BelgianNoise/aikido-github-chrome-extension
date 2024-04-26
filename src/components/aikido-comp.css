@@ -1,0 +1,111 @@
+.aik-container {
+  --aik-color-critical: #D72638;
+  --aik-color-high: #FF9505;
+  --aik-color-medium: #00ADEE;
+  --aik-color-low: #00B391;
+  --aik-color-primary: #6551F3;
+  --aik-color-primary-dark: #141031;
+
+  font-family: Inter, sans-serif;
+  max-width: 100%;
+  /* border: 1px solid var(--color-border-default); */
+  border: 1px solid var(--aik-color-primary);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 10px;
+  position: relative;
+  color: var(--color-fg-default);
+}
+@media screen and (min-width: 1000px) {
+  .aik-container {
+    padding: 20px;
+  }
+}
+
+.aik-container p {
+  margin: 0;
+}
+
+.aik-loading-container {
+  display: grid;
+  place-items: center;
+}
+
+.aik-main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.aik-main-row-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100%;
+}
+@media screen and (min-width: 800px) {
+  .aik-main-row-column {
+    gap: 20px;
+  }
+}
+
+.aik-powered-by {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: var(--aik-color-primary);
+  color: white;
+  z-index: 2;
+}
+
+.aik-issues-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.aik-extra-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+}
+.aik-container a, .aik-container button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--aik-color-primary);
+  white-space: nowrap;
+  background: var(--aik-color-primary);
+  color: var(--color-fg-default);
+}
+.aik-container a:hover, .aik-container button:hover {
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--aik-color-primary-dark);
+}
+.aik-extra-info > button {
+  background: transparent;
+  color: var(--aik-color-primary);
+  padding: 10px;
+  display: block;
+  height: calc(10px + 10px + 1.5*var(--body-font-size, 14px));
+  width: calc(10px + 10px + 1.5*var(--body-font-size, 14px));
+}
+.aik-extra-info > button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.score-ometer-container {
+  width: 35%;
+  min-width: 150px;
+}

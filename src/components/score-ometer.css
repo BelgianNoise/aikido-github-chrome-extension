@@ -1,0 +1,92 @@
+.ometer-container {
+  width: 100%;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  position: relative;
+  padding: 3px;
+  padding-bottom: 0;
+}
+.ometer-ring {
+  position: relative;
+  width: 100%;
+  height: 200%;
+  /* --bgColor-default is from Github, should be #0d1117 in dark mode */
+  background: radial-gradient(
+    var(--bgColor-default) 0,
+    var(--bgColor-default) 67%,
+    transparent 67%,
+    transparent 100%
+  ), conic-gradient(
+    var(--aik-color-medium) 0deg,
+    var(--aik-color-medium) 36deg,
+    var(--aik-color-high) 36deg,
+    var(--aik-color-high) 72deg,
+    var(--aik-color-critical) 72deg,
+    var(--aik-color-critical) 90deg,
+    transparent 90deg,
+    transparent 270deg,
+    var(--aik-color-low) 270deg,
+    var(--aik-color-low) 342deg,
+    var(--aik-color-medium) 342deg,
+    var(--aik-color-medium) 360deg
+  );
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border-style: none;
+}
+
+.score-ometer-main-container {
+  padding: 3px;
+  padding-bottom: 0;
+}
+
+.score-ometer-main-container p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.ometer-container p {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  line-height: 35px;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 850px) {
+  .ometer-container p {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .ometer-container p {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+.ometer-pointer-container {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all 0.5s ease-in-out;
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.ometer-pointer {
+  width: 8%;
+  height: 3px;
+  border-radius: 1px;
+  background: white;
+  margin-left: 1px;
+}
